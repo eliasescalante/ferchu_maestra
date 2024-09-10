@@ -1,0 +1,111 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #000; /* Fondo negro */
+}
+
+/* Fondo de Fuegos Artificiales */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Envía el fondo detrás del contenido */
+    display: none; /* Oculta por defecto */
+}
+
+/* Contenedor Principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Estilos para el Header */
+header {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+/* Estilos para el Mensaje */
+.message {
+    display: none; /* Oculta el mensaje por defecto */
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #ffeb3b; /* Color dorado para destacar el mensaje */
+    animation: fadeIn 2s ease-out;
+}
+
+/* Estilos para el Botón */
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #f44336; /* Botón rojo */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Tamaño de fuente más pequeño en móviles */
+    }
+
+    .message {
+        font-size: 1.2em; /* Tamaño de fuente más pequeño en móviles */
+    }
+
+    button {
+        font-size: 1em; /* Tamaño de fuente más pequeño en móviles */
+        padding: 8px 16px; /* Ajustar el padding en móviles */
+    }
+}
+
+/* Para pantallas medianas (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    h1 {
+        font-size: 3em; /* Tamaño de fuente mediano en tablets */
+    }
+
+    .message {
+        font-size: 1.4em; /* Tamaño de fuente mediano en tablets */
+    }
+
+    button {
+        font-size: 1.1em; /* Tamaño de fuente mediano en tablets */
+        padding: 9px 18px; /* Ajustar el padding en tablets */
+    }
+}
